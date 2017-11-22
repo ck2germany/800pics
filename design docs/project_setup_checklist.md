@@ -31,6 +31,8 @@ list.
   * `react-dom`
   * `react-router-dom`
   * `redux`
+  * `redux-logger`
+  * `redux-thunk`
   * `react-redux`
   * `babel-core`
   * `babel-loader`
