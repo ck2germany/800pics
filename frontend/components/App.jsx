@@ -1,8 +1,12 @@
 import React from 'react';
 
+import NavBarContainer from './navbar/navbar_container';
+
+//the App component is the only thing in root, but we use root to wrap
+// the app component in HashRouter and Provider
 const App = () => (
   <div>
-    <h1>Landscapes</h1>
+    <NavBarContainer />
   </div>
 );
 
