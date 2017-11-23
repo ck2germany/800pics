@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.changeFormLink = this.changeFormLink.bind(this);
   }
 
   handleInput (type) {
@@ -67,6 +68,8 @@ class SessionForm extends React.Component {
           </label>
           <input type="submit" value={this.props.formType} />
         </form>
+        <br />
+        {this.changeFormLink()}
       </div>
     );
   }

@@ -1,25 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default ({ currentUser, logout }) => {
-  const display = currentUser ? (
-    <div>
-      <h4>{currentUser.username}</h4>
-      <button onClick={logout}>Log out</button>
-    </div>
-  ) : (
-    <div>
-      <Link className="button" to='/signup'>Sign Up</Link>
-      <Link className="button" to='/login'>Log In</Link>
-    </div>
-  );
+const sessionButtons = () => (
+  <nav>
+    <Link className="button" to='/signup'>Sign Up</Link>
+      &nbsp;or&nbsp;
+    <Link className="button" to='/login'>Log In</Link>
+  </nav>
+);
 
-  return (
-    <header>
-      <h1>Landscapes</h1>
-      <div>
-        {display}
-      </div>
-    </header>
-  );
-};
+const loggedInButtons = ( currentuser, logout ) => (
+  <hgroup>
+    <h3>{currentuser.username}</h3>
+    <button onClick={logout}>Log Out</button>
+  </hgroup>
+);
+
+const NavBar = ({ currentUser, logout }) => (
+  currentUser ? loggedInButtons(currentUser, logout) : sessionButtons()
+);
+
+export default NavBar;
