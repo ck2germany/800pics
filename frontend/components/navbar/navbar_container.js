@@ -4,10 +4,13 @@ import { logout } from '../../actions/session_actions';
 import NavBar from './navbar';
 
 
-const mapStateToProps = ({ session }) => ({
+const mapStateToProps = ({ session }) => {
+  console.log(session);
+  return ({
   currentUser: session.currentUser,
   loggedIn: Boolean(session.currentUser)
-});
+  });
+};
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout())

@@ -20,7 +20,6 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.props);
     const user = this.state;
     this.props.formAction({user})
     .then(() => this.props.history.push('/'));
@@ -48,6 +47,7 @@ class SessionForm extends React.Component {
 
 
   render () {
+    const buttonText = (this.props.formType === 'login') ? "Log In" : "Sign Up";
     return (
       <div className="session-form-container">
         <h3>Welcome to Landscapes</h3>
@@ -59,6 +59,7 @@ class SessionForm extends React.Component {
               onChange={this.handleInput('username')}
               />
           </label>
+          <br/>
           <label>Password:
             <input
               type="password"
@@ -66,10 +67,13 @@ class SessionForm extends React.Component {
               onChange={this.handleInput('password')}
               />
           </label>
-          <input type="submit" value={this.props.formType} />
+          <br/>
+          <input type="submit" value={buttonText} />
         </form>
         <br />
-        {this.changeFormLink()}
+        <div id="change-form-text">
+          {this.changeFormLink()}
+        </div>
       </div>
     );
   }
