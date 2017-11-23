@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const sessionButtons = () => (
-  <nav className="session-nav">
+  <nav className="session-nav-buttons">
     <Link className="button" to='/signup'>Sign Up</Link>
       &nbsp;or&nbsp;
     <Link className="button" to='/login'>Log In</Link>
@@ -10,7 +10,7 @@ const sessionButtons = () => (
 );
 
 const loggedInButtons = ( currentuser, logout ) => (
-  <nav>
+  <nav className="user-nav-buttons">
     <p>{currentuser.username}</p>
     <button onClick={logout}>Log Out</button>
   </nav>
@@ -31,9 +31,11 @@ const NavBar = ({ currentUser, logout }) => {
   );
 
   return (
-    <header className="header-nav-left">
-      <h1 className="logo">Landscapes</h1>
-      <div>
+    <header className="header-nav">
+      <div className="header-nav-left">
+        <h1 className="logo">Landscapes</h1>
+      </div>
+      <div className="header-nav-right">
         {display}
       </div>
     </header>

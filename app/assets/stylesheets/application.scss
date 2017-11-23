@@ -20,13 +20,23 @@ body, html{
   text-decoration: none;
 }
 
+div {
+  display: inherit;
+}
+
 a:link, a:visited {
   text-decoration: none;
 }
 
 .button {
-  text-decoration: none;
-  padding: 3px;
+  background-color: #41724d; /* Green */
+border-radius: 3px;
+color: white;
+padding: 8px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 14px;
 }
 
 header {
@@ -34,32 +44,42 @@ header {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #0a0a0a;
-  height: 40px;
+  height: 30px;
 
   h1 {
     font-size: 20px;
   }
 }
 
-
-
 .header-nav {
   display: flex;
+  justify-content: space-between;
   width: 100%;
 }
-
-.header-nav-left img {
-  height: 20px;
-  width: 20px;
+//left side
+.header-nav-left {
+ display: flex;
 }
+
 .logo {
 
 }
 
-
-.session-nav {
- float: right;
+//right side
+.header-nav-right {
+  display: flex;
 }
+
+// right side buttons either signup/login or user and logout
+.session-nav-buttons {
+
+}
+
+.user-nav-buttons {
+
+}
+
+
 
 .session-form-container {
   padding: 20px;

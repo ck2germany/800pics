@@ -1,8 +1,7 @@
 import React from 'react';
-import {
-  Route,
-  Switch
-} from 'react-router-dom';
+import { Route } from 'react-router-dom';
+
+import { AuthRoute } from '../util/route_util';
 
 import NavBarContainer from './navbar/navbar_container';
 import SessionFormContainer from './session/session_form_container';
@@ -13,8 +12,8 @@ const App = () => (
   <div>
 
       <Route path="/" component={NavBarContainer} />
-      <Route path="/login" component={SessionFormContainer} />
-      <Route path="/signup" component={SessionFormContainer} />
+      <AuthRoute path="/login" component={SessionFormContainer} />
+      <AuthRoute path="/signup" component={SessionFormContainer} />
 
   </div>
 );
