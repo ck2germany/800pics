@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Signup extends React.Component {
+class SessionForm extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -22,11 +22,32 @@ class Signup extends React.Component {
     .then(() => this.props.history.push('/'));
   }
 
+  changeFormLink () {
+    if (this.props.formType === 'login') {
+      return <Link to='/signup'>Sign Up Instead</Link>;
+    } else {
+      return <Link to='/login'>Log In Instead</Link>;
+    }
+  }
+
+  renderErrors () {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+
   render () {
     return (
-      <div className="session-form">
-        <h3>Sign Up</h3>
-        <form>
+      <div className="session-form-container">
+        <h3>Welcome to Landscapes</h3>
+        <form onSubmit={this.handleSubmit}>
           <label>Username:
             <input
               type="text"
@@ -41,11 +62,11 @@ class Signup extends React.Component {
               onChange={this.handleInput('password')}
               />
           </label>
-          <button onClick={this.handleSubmit}>Sign Up</button>
+          <input type="submit" value={this.props.formType} />
         </form>
       </div>
     );
   }
 }
 
-export default Signup;
+export default SessionForm;
