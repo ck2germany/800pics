@@ -11,15 +11,10 @@ import SessionFormContainer from './session/session_form_container';
 // the app component in HashRouter and Provider
 const App = () => (
   <div>
-    <header className="header-nav">
-      <div className="header-nav-left">Landspaces</div>
-      <NavBarContainer />
-    </header>
-    <Switch>
+
+      <Route path="/" component={NavBarContainer} />
       <Route path="/login" component={SessionFormContainer} />
       <Route path="/signup" component={SessionFormContainer} />
-    </Switch>
-
 
   </div>
 );
