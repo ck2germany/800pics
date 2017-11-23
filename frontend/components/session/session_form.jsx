@@ -59,7 +59,7 @@ class SessionForm extends React.Component {
               onChange={this.handleInput('username')}
               />
           </label>
-          <br/>
+
           <label>Password:
             <input
               type="password"
@@ -67,11 +67,11 @@ class SessionForm extends React.Component {
               onChange={this.handleInput('password')}
               />
           </label>
-          <br/>
-          <input type="submit" value={buttonText} />
+
+          <input id="submit-button" type="submit" value={buttonText} />
         </form>
         <br />
-        <div id="change-form-text">
+        <div>
           {this.changeFormLink()}
         </div>
       </div>

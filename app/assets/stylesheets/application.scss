@@ -29,6 +29,7 @@ header {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #0a0a0a;
+  height: 40px;
 }
 
 
@@ -57,12 +58,28 @@ button {
   height: 400px;
   margin: 20px auto;
   border: 1px solid lightgray;
-}
+  border-radius: 8px;
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  label {
+    display: block;
+    margin: 5px;
+  }
 
-.session-form_container > label {
-  display: block;
-}
-.session-form-container #change-form-text {
-  text-align: center;
+
+
+  h3, div {
+    text-align: center;
+  }
+
+   #submit-button {
+    margin: 10px;
+  }
+
+
 
 }
