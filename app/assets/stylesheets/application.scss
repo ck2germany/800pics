@@ -83,11 +83,11 @@ body, html {
 //   text-decoration: none;
 // }
 
-.button {
-  background-color: clear; /* Green */
+.text-button {
+  background-color: clear;
 border-radius: 3px;
 color: black;
-padding: 8px;
+padding: 2px 8px;
 text-align: center;
 text-decoration: none;
 display: inline-block;
@@ -98,6 +98,7 @@ width: 50px;
 .text-link {
   color: #660099;
 }
+
 header {
   background-color: white;
   display: flex;
@@ -135,6 +136,17 @@ header {
 //right side
 .header-nav-right {
   display: flex;
+  align-items: baseline;
+
+  p {
+    padding: 0px 8px;
+    font-size: 12px;
+  }
+
+  button:hover {
+    color: #660099;
+  }
+
 }
 
 // right side buttons either signup/login or user and logout
@@ -143,7 +155,8 @@ header {
 }
 
 .user-nav-buttons {
-
+  display: flex;
+  align-items: center;
 }
 
 
@@ -180,6 +193,7 @@ header {
       border: 1px solid lightgray;
       border-radius: 3px;
       margin-bottom: 5px;
+      padding: 2px 5px;
 
     }
 

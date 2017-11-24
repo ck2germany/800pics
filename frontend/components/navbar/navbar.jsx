@@ -19,14 +19,14 @@ import { Link } from 'react-router-dom';
 
 const NavBar = ({ currentUser, logout }) => {
   const display = currentUser ? (
-    <div>
-      <h4>{currentUser.username}</h4>
-      <button onClick={logout}>Log Out</button>
+    <div className="header-nav-right">
+      <p>{currentUser.username}</p>
+      <button className="text-button" onClick={logout}>Log out</button>
     </div>
   ) : (
     <div>
-      <Link className="button" to='/signup'>Sign Up</Link>
-      <Link className="button" to='/login'>Log In</Link>
+      <Link className="text-button" to='/signup'>Sign Up</Link>
+      <Link className="text-button" to='/login'>Log In</Link>
     </div>
   );
 
@@ -35,7 +35,7 @@ const NavBar = ({ currentUser, logout }) => {
       <div className="header-nav-left">
         <h1 className="logo"><a href='#'><i className="fa fa-tree"></i>Landscapes</a></h1>
       </div>
-      <div className="header-nav-right">
+      <div>
         {display}
       </div>
     </header>
