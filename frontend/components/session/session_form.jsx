@@ -27,9 +27,9 @@ class SessionForm extends React.Component {
 
   changeFormLink () {
     if (this.props.formType === 'login') {
-      return <Link to='/signup'>Sign Up Instead</Link>;
+      return <Link to='/signup'>Need an account? Sign up instead.</Link>;
     } else {
-      return <Link to='/login'>Log In Instead</Link>;
+      return <Link to='/login'>Already have an account? Log in instead.</Link>;
     }
   }
 
@@ -52,21 +52,21 @@ class SessionForm extends React.Component {
       <div className="session-form-container">
         <h3>Welcome to Landscapes</h3>
         <form onSubmit={this.handleSubmit}>
-          <label>Username:
+          <label>Username</label>
             <input
               type="text"
               value={this.state.username}
               onChange={this.handleInput('username')}
               />
-          </label>
 
-          <label>Password:
+
+          <label>Password</label>
             <input
               type="password"
               value={this.state.password}
               onChange={this.handleInput('password')}
               />
-          </label>
+
 
           <input id="submit-button" type="submit" value={buttonText} />
         </form>

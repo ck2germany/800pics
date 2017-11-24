@@ -34,7 +34,7 @@
    box-sizing: inherit;
    background: transparent;
 
-   border: 1px solid pink !important;
+   // border: 1px solid pink !important;
  }
 
  ul {
@@ -69,19 +69,19 @@
  //end of reset file
 
 body, html {
-  background-color: #f8f8f8;
+  background-color: #f6f6f6;
 
   // text-decoration: none;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 
 
 
 }
 
 
-a:link, a:visited {
-  text-decoration: none;
-}
+// a:link, a:visited {
+//   text-decoration: none;
+// }
 
 .button {
   background-color: clear; /* Green */
@@ -99,8 +99,11 @@ header {
   background-color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  height: 50px;
+
+  height: 40px;
+  border-bottom: 1px solid #0a0a0a;
 
   h1 {
     font-size: 20px;
@@ -108,14 +111,16 @@ header {
   }
 
   i {
-    padding: 4px;
+    padding: 4px 6px;
   }
 }
 
 .header-nav {
   display: flex;
   justify-content: space-between;
+
   width: 100%;
+
 }
 //left side
 .header-nav-left {
@@ -145,30 +150,45 @@ header {
 .session-form-container {
   padding: 20px;
   background-color: white;
-  max-width: 500px;
+  max-width: 300px;
   height: 400px;
   margin: 20px auto;
   border: 1px solid lightgray;
   border-radius: 8px;
+  font-size: 10px;
   form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    // align-items: center;
+    padding: 30px;
+
   }
   label {
     display: block;
-    margin: 5px;
+    margin: 0px 5px;
+
+  }
+
+  input {
+    border: 1px solid lightgray;
   }
   h3, div {
     text-align: center;
+    font-weight: normal;
   }
 
 
    #submit-button {
-    margin: 10px;
+     font-size: 12px;
+     width: 50px;
+     text-align: center;
+    color: white;
+
     background-color: #41724d;
     box-shadow: none;
+    padding: 4px 8px;
+    border-radius: 4px;
   }
 
 

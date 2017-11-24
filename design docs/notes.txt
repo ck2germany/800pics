@@ -1,8 +1,7 @@
 Icon Credit: Tree by Alena Artemova from the Noun Project
 
 ##Fonts
-Headings/Titles: Raleway
-<link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+Headings/Titles: open-sans
 
 Descriptions and text
 <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
