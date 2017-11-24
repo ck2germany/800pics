@@ -27,9 +27,9 @@ class SessionForm extends React.Component {
 
   changeFormLink () {
     if (this.props.formType === 'login') {
-      return <Link to='/signup'>Need an account? Sign up instead.</Link>;
+      return <div>Need an account? <Link className="text-link" to='/signup'>Sign up instead.</Link></div>;
     } else {
-      return <Link to='/login'>Already have an account? Log in instead.</Link>;
+      return <div>Already have an account? <Link className="text-link" to='/login'>Log in instead.</Link></div>;
     }
   }
 
@@ -69,11 +69,13 @@ class SessionForm extends React.Component {
 
 
           <input id="submit-button" type="submit" value={buttonText} />
+
         </form>
         <br />
-        <div>
-          {this.changeFormLink()}
-        </div>
+          <span id="change-form-link">
+            {this.changeFormLink()}
+          </span>
+
       </div>
     );
   }

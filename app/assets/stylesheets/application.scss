@@ -34,7 +34,7 @@
    box-sizing: inherit;
    background: transparent;
 
-   border: 1px solid pink !important;
+   // border: 1px solid pink !important;
  }
 
  ul {
@@ -95,6 +95,9 @@ font-size: 12px;
 width: 50px;
 }
 
+.text-link {
+  color: #660099;
+}
 header {
   background-color: white;
   display: flex;
@@ -127,9 +130,7 @@ header {
  display: flex;
 }
 
-.logo {
- background-image: url('images/tree_icon.png');
-}
+
 
 //right side
 .header-nav-right {
@@ -148,49 +149,63 @@ header {
 
 
 .session-form-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 20px;
   background-color: white;
   max-width: 300px;
-  height: 400px;
+  height: 300px;
   margin: 20px auto;
   border: 1px solid lightgray;
-  border-radius: 8px;
+  border-radius: 3px;
   font-size: 10px;
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    // align-items: center;
-    padding: 30px;
-
-  }
-  label {
-    display: block;
-    margin: 0px 5px;
-
-  }
-
-  input {
-    border: 1px solid lightgray;
-  }
-  h3, div {
-    text-align: center;
-    font-weight: normal;
-  }
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      // align-items: center;
+      padding: 10px 30px;
 
 
-   #submit-button {
-     font-size: 12px;
-     width: 50px;
-     text-align: center;
-    color: white;
-
-    background-color: #41724d;
-    box-shadow: none;
-    padding: 4px 8px;
-    border-radius: 4px;
-  }
+    }
+    label {
+      // display: block;
 
 
+    }
+
+    input {
+      border: 1px solid lightgray;
+      border-radius: 3px;
+      margin-bottom: 5px;
+
+    }
+
+    h3, div {
+
+      text-align: center;
+      font-weight: normal;
+    }
+
+     #submit-button {
+       font-size: 12px;
+       width: 50px;
+       text-align: center;
+      color: white;
+
+      background-color: #41724d;
+      box-shadow: none;
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin: 10px auto;
+    }
+    #change-form-link {
+      position: absolute;
+      bottom: 10px;
+
+
+    }
 
 }
