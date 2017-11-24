@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const sessionButtons = () => (
   <nav className="session-nav-buttons">
     <Link className="button" to='/signup'>Sign Up</Link>
@@ -25,7 +26,7 @@ const NavBar = ({ currentUser, logout }) => {
   ) : (
     <div>
       <Link className="button" to='/signup'>Sign Up</Link>
-      &nbsp;or&nbsp;
+
       <Link className="button" to='/login'>Log In</Link>
     </div>
   );
@@ -33,7 +34,7 @@ const NavBar = ({ currentUser, logout }) => {
   return (
     <header className="header-nav">
       <div className="header-nav-left">
-        <h1 className="logo">Landscapes</h1>
+        <h1 className="logo"><a href='#'><i class="fa fa-tree"i></i>Landscapes</a></h1>
       </div>
       <div className="header-nav-right">
         {display}

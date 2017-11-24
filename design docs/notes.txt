@@ -1,3 +1,23 @@
 Icon Credit: Tree by Alena Artemova from the Noun Project
 
+##Fonts
+Headings/Titles: Raleway
+<link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+
+Descriptions and text
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+
 Color Scheme
+
+'inactive' base background - #fefcef - light yellow (may want to change)
+container background - #fff - white
+
+headings/title text - #0a0a0a - dark slate purple
+secondary headings - #232723 - dark slate blackish
+secondary text - #797979 - medium gray
+
+attention action signifier - #032b13 - forest Green
+regular action signifier - #41724d - lighter forest green
+
+likes if I get to them should be purple
