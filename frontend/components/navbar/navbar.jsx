@@ -17,7 +17,8 @@ import { Link } from 'react-router-dom';
 //   </nav>
 // );
 
-const NavBar = ({ currentUser, logout }) => {
+const NavBar = ({ currentUser, logout, loginDemoUser }) => {
+
   const display = currentUser ? (
     <div className="header-nav-right">
       <p>{currentUser.username}</p>
@@ -27,8 +28,12 @@ const NavBar = ({ currentUser, logout }) => {
     <div>
       <Link className="text-button" to='/signup'>Sign Up</Link>
       <Link className="text-button" to='/login'>Log In</Link>
+      <button className="text_button" id="demo-button" onClick={loginDemoUser}>Demo Login</button>
     </div>
   );
+
+
+
 
   return (
     <header className="header-nav">

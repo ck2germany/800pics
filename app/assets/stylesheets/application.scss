@@ -151,12 +151,18 @@ header {
 
 // right side buttons either signup/login or user and logout
 .session-nav-buttons {
-
+  display: flex;
 }
 
 .user-nav-buttons {
   display: flex;
   align-items: center;
+}
+
+#demo-button {
+  // width: 60px !important;
+  font-size: 12px;
+  margin-right: 8px;
 }
 
 
