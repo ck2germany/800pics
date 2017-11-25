@@ -222,4 +222,13 @@ header {
 
     }
 
+    #session-errors-div {
+      width:100%;
+      height: 20px;
+    }
+
+    #session-errors-div > ul > li {
+      color: #cc0000;
+    }
+
 }

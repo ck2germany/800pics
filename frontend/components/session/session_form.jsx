@@ -18,6 +18,11 @@ class SessionForm extends React.Component {
     };
   }
 
+  componentDidMount () {
+    this.props.clearErrors();
+  }
+
+
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
@@ -34,23 +39,31 @@ class SessionForm extends React.Component {
   }
 
   renderErrors () {
-    return (
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
+    if (this.props.errors) {
+      return (
+       <ul>
+         {this.props.errors.map((error, i) => (
+           <li key={`error-${i}`}>
+             {error}
+           </li>
+         ))}
+       </ul>
+     );
+   } else {
+     return (<ul></ul>);
+   }
   }
 
 
   render () {
+
     const buttonText = (this.props.formType === 'login') ? "Log In" : "Sign Up";
     return (
       <div className="session-form-container">
         <h3>Welcome to Landscapes</h3>
+        <div id="session-errors-div">
+          {this.renderErrors()}
+        </div>
         <form onSubmit={this.handleSubmit}>
           <label>Username</label>
             <input
