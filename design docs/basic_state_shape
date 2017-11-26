@@ -1,0 +1,52 @@
+{
+  entities: {
+    photos: {
+      1: {
+        id: 1,
+        title: 'My first photo',
+        subtitle: 'a picture of the sky',
+        img_url: '/somepath/my_img.jpeg',
+        user_id: 4,
+      },
+      2: {
+        id: 2,
+        title: 'My second photo',
+        subtitle: 'a picture of my foot',
+        img_url: '/somepath/my_img2.jpeg',
+        user_id: 4
+      },
+      3: {
+        id: 3,
+        title: 'A Tree',
+        subtitle: '',
+        img_url: '/somepath/my_img3.jpeg',
+        user_id: 2
+      }
+    }
+    users: {
+      2: {
+        id: 2,
+        username: 'smiley',
+        img_url: 'somepath/user1.jpg'
+        users_followers: 6,
+        user_follows: 10,
+      },
+      4: {
+        id: 4,
+        username: 'yo',
+        img_url: 'somepath/user3.jpg'
+        users_followers: 22,
+        user_follows: 2,
+      }
+    }
+  }
+  errors : {
+    login: ["Password must be a minimum of 6 characters"],
+    photo_post: ["Photo title cannot be blank"]
+  }
+  session: {
+    id: 2,
+    username: 'smiley',
+    img_url: 'somepath/user1.jpg',
+  }
+}
