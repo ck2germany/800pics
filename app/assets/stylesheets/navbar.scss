@@ -1,0 +1,100 @@
+.text-link {
+  color: #660099;
+}
+
+header {
+
+
+  h1 {
+    font-size: 20px;
+    padding: 0;
+  }
+
+  i {
+    padding: 4px 6px;
+    margin-left: 8px;
+  }
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  height: 40px;
+  border-bottom: 1px solid #0a0a0a;
+
+}
+//left side
+.header-nav-left {
+ display: flex;
+}
+
+
+
+//right side
+.header-nav-right {
+  display: flex;
+  align-items: baseline;
+
+  p {
+    padding: 0px 8px;
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+  //
+  // button:hover {
+  //   color: #660099;
+  //
+  // }
+
+}
+
+// right side buttons either signup/login or user and logout
+.session-nav-buttons {
+  display: flex;
+
+  button:hover, a:hover {
+    color: #660099;
+  }
+
+}
+
+.text-button {
+  background-color: clear;
+  color: #660099;
+  border-radius: 3px;
+  // color: black;
+  padding: 2px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  // width: 50px;
+}
+
+
+// .user-nav-buttons {
+//   display: flex;
+//   align-items: center;
+// }
+
+#demo-button {
+
+  font-size: 14px;
+  margin-right: 8px;
+  margin-left: 8px;
+  border: 1px solid #660099;
+  border-radius: 8px;
+  background-color: #660099;
+  color: white;
+}

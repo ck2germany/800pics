@@ -15,16 +15,12 @@ const App = () => (
 
       <Route path="/" component={NavBarContainer} />
 
-      //after logged out, this is first path it hits
+    <Switch>
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
-
-    <Switch>
       <AuthRoute exact path="/" component={Intro} />
       <ProtectedRoute path="/main" component={Main} />
     </Switch>
-
-
 
   </div>
 );
