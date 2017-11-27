@@ -11,15 +11,15 @@ export default () => (
         <div className="splash-img-text">
           <h1>Landscapes, a website devoted to photography</h1>
           <h3>Rediscover your love of nature</h3>
-
+            <div className="">
+                <Link className="splash-button" to='/signup'>Join Landscapes</Link>
+            </div>
 
         </div>
-        <div className="">
-            <Link className="splash-button" to='/signup'>Join Landscapes</Link>
-        </div>
+
 
     </div>
 
 
   </div>
-)
+);

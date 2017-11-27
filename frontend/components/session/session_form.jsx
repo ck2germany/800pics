@@ -27,7 +27,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.formAction({user})
-    .then(() => this.props.history.push('/'));
+    .then(() => this.props.history.push('/main'));
   }
 
   changeFormLink () {

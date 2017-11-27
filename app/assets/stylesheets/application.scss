@@ -83,17 +83,6 @@ body, html {
 //   text-decoration: none;
 // }
 
-.text-button {
-  background-color: clear;
-border-radius: 3px;
-color: black;
-padding: 2px 8px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 12px;
-width: 50px;
-}
 
 .text-link {
   color: #660099;
@@ -116,6 +105,7 @@ header {
 
   i {
     padding: 4px 6px;
+    margin-left: 8px;
   }
 }
 
@@ -152,15 +142,29 @@ header {
 // right side buttons either signup/login or user and logout
 .session-nav-buttons {
   display: flex;
+
 }
 
-.user-nav-buttons {
-  display: flex;
-  align-items: center;
+.text-button {
+  background-color: clear;
+  border-radius: 3px;
+  color: black;
+  padding: 2px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  // width: 50px;
 }
+
+
+// .user-nav-buttons {
+//   display: flex;
+//   align-items: center;
+// }
 
 #demo-button {
-  // width: 60px !important;
+
   font-size: 12px;
   margin-right: 8px;
 }

@@ -1,19 +1,14 @@
 .splash-img-frame {
-  height: calc(75vh);
-  border: 1px solid pink;
 
-
-  // font-size: 60px;
-  // font-weight: bold;
   display: flex;
   flex-direction: column;
-
 
 }
 
 .splash-img {
   max-height: 100%;
   max-width: 100%;
+  height: auto;
   // height: 50%;
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -21,13 +16,9 @@
   background-size: cover;
   position: relative;
 
-
-
 }
 
-
 .splash-img-text {
-
   font-family: Quicksand, sans-serif;
   text-align: center;
   color: ghostwhite;
@@ -62,7 +53,8 @@
   text-align: center;
   color: ghostwhite;
   position: relative;
-  top: 20px;
+  margin: 0 auto;
+  top: 80px;
     padding: 10px 15px;
     // margin: 20px;
     font-size: 35px;
