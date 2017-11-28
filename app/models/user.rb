@@ -16,6 +16,11 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }, allow_nil: true
   after_initialize :ensure_session_token
 
+  has_many :photos,
+  foreign_key: :user_id,
+  primary_key: :id,
+  class_name: :Photo
+
   attr_reader :password
 
   def password=(pw)
