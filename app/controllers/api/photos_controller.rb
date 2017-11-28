@@ -2,11 +2,13 @@ class Api::PhotosController < ApplicationController
 
   def index
     # have to decide to split indexes here or use selector in frontend
-
+    # I want either a specific users id and all photos, or all photos period
+    # for now, just returning all photos
+    @photos = Photo.all
   end
 
   def show
-    @photo = Photo.find_by(params[:id])
+    @photo = Photo.find_by(id: params[:id])
     if @photo
       render "api/photos/show"
     else
@@ -24,8 +26,8 @@ class Api::PhotosController < ApplicationController
     end
   end
 
-  def edit
-    @photo = Photo.find_by(params[:id])
+  def update
+    @photo = Photo.find_by(id: params[:id])
     if @photo.update_attributes(photo_edit_params)
       render "api/photos/show"
     else
@@ -35,7 +37,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def delete
-    @photo = Photo.find_by(params[:id])
+    @photo = Photo.find_by(id: params[:id])
     if @photo
       @photo.destroy
       render "api/photos/show"

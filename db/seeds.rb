@@ -7,7 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Photo.destroy_all
 
 # User
 user1 = User.create!(username: "Demo User", password: "password")
 user2 = User.create!(username: "CK", password: "password")
+
+photo1 = Photo.create!(user_id: user2.id,
+                      title: "Sample Photo",
+                      description: "Sample Description for my sample photo",
+                      img_url: "http://res.cloudinary.com/studio-27/image/upload/c_scale,w_724/v1495664854/landscapes/IMG_0036_zofjr7.jpg"
+                      )
+photo2 = Photo.create!(user_id: user2.id,
+                       title: "Sample Photo",
+                       description: "Sample Description for my sample photo",
+                       img_url: "http://res.cloudinary.com/studio-27/image/upload/c_scale,w_724/v1495664854/landscapes/IMG_0036_zofjr7.jpg"
+                       )
