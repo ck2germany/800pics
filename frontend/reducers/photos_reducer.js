@@ -2,7 +2,8 @@ import merge from 'lodash/merge';
 
 import {
   RECEIVE_ALL_PHOTOS,
-  RECEIVE_PHOTO
+  RECEIVE_PHOTO,
+  DELETE_PHOTO
 } from '../actions/photo_actions.js';
 
 const photosReducer = (state = {}, action) => {
@@ -18,6 +19,10 @@ const photosReducer = (state = {}, action) => {
     case RECEIVE_PHOTO:
       let newPhoto = {[action.photo.id]: action.photo };
       return merge({}, state, newPhoto);
+    case DELETE_PHOTO:
+      let newState = merge({}, state);
+      delete newState[action.photoId];
+      return newState;
     default:
       return state;
   }
