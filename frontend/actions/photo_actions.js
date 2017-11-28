@@ -31,10 +31,11 @@ export const receiveErrors = (errors) => ({
 //thunks
 export const fetchAllPhotos = () => dispatch => (
   PhotoUtil.getAllPhotos()
-  .then(photos => (
-    dispatch(receiveAllPhotos(photos))
-  ), err => (
-    dispatch(receiveErrors(err.responseJSON))
+  .then(
+    photos => (
+      dispatch(receiveAllPhotos(photos))
+    ), err => (
+      dispatch(receiveErrors(err.responseJSON))
   ))
 );
 
