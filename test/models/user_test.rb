@@ -8,6 +8,7 @@
 #  password_digest :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  profile_img_url :string           default("/assets/images/leaf.png")
 #
 
 require 'test_helper'

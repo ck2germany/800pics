@@ -25,12 +25,13 @@ class PhotoIndex extends React.Component {
       return (<div>Loading...</div>);
     }
 
+    let pArr = photoArr.slice(0,5);
 
     return (
       <div>
         <ul>
           {
-            photoArr.map(photo => <PhotoIndexItem
+            pArr.map(photo => <PhotoIndexItem
               photo={photo}
               key={`photo-${photo.id}`} />)
           }
