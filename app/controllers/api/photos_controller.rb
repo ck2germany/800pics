@@ -9,6 +9,7 @@ class Api::PhotosController < ApplicationController
 
   def show
     @photo = Photo.find_by(id: params[:id])
+    
     if @photo
       render "api/photos/show"
     else
