@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PhotoIndexItem = ({photo}) => {
 
@@ -9,7 +10,7 @@ const PhotoIndexItem = ({photo}) => {
           <img src={photo.profile_img_url} />
         </div>
         <div className="user_prof_data">
-          <h2>{photo.username}</h2>
+          <h2><Link to={`/user/${photo.user_id}`} >{photo.username}</Link></h2>
           <h4>Placeholder for extra info</h4>
         </div>
       </div>

@@ -4,16 +4,21 @@ class Api::PhotosController < ApplicationController
     # have to decide to split indexes here or use selector in frontend
     # I want either a specific users id and all photos, or all photos period
     # for now, just returning all photos
-    @photos = Photo.all
+    if params[:id]
+      user = User.find_by(params[:id])
+      @photos = user.photos
+    else
+      @photos = Photo.all
+    end
   end
 
   def show
     @photo = Photo.find_by(id: params[:id])
-    
+
     if @photo
       render "api/photos/show"
     else
-      render json: ["Couldn't find photo"], status: 422
+      render json: ["Couldn\'t find photo"], status: 422
     end
   end
 
