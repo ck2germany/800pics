@@ -26,3 +26,6 @@ const PhotoIndexItem = ({photo}) => {
 };
 
 export default PhotoIndexItem;
+
+
+// <h2><Link to={`/user/${photo.user_id}`} >{photo.username}</Link></h2>

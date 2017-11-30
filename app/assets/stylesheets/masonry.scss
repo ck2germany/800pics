@@ -1,0 +1,28 @@
+.masonry-view-div {
+  padding-top: 20px;
+}
+
+.masonry-grid {
+  max-width: 80%;
+  // display: flex;
+
+  // align-content: space-between;
+  margin: 0 auto;
+  // border: 1px solid pink;
+  // column-width: 33%;
+
+}
+
+.masonry-grid-item {
+  //
+  // width: 30%;
+  // margin: 0 auto;
+  width: 33.3%;
+  overflow: hidden;
+
+   img {
+     margin: 0;
+     padding: 2px;
+   }
+
+}
