@@ -8,7 +8,7 @@
 #  password_digest :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  profile_img_url :string           default("/assets/images/leaf.png")
+#  profile_img_url :string           default("http://res.cloudinary.com/studio-27/image/upload/c_scale,w_32/v1511981034/landscapes/leaf.png")
 #
 
 class User < ApplicationRecord
@@ -22,6 +22,24 @@ class User < ApplicationRecord
   foreign_key: :user_id,
   primary_key: :id,
   class_name: :Photo
+
+  has_many :fanships,
+  foreign_key: :followee_id,
+  primary_key: :id,
+  class_name: :Follow
+
+  has_many :followships,
+  foreign_key: :follower_id,
+  primary_key: :id,
+  class_name: :Follow
+
+  has_many :followees,
+  through: :fanships,
+  source: :followee
+
+  has_many :followers,
+  through: :followships,
+  source: :follower
 
   attr_reader :password
 
