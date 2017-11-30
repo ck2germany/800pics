@@ -35,7 +35,9 @@ class UserProfile extends React.Component {
         </div>
 
         <div className="profile-img-container">
-          <img className="profile-img" src={user.profile_img_url}/>
+          <div className="prof-icon-container">
+            <i className="profile-img fa fa-pagelines fa-4x" aria-hidden="true"></i>
+          </div>
         </div>
 
         <div className="profile-user-box">
@@ -62,3 +64,5 @@ class UserProfile extends React.Component {
 }
 
 export default UserProfile;
+
+//  <img className="profile-img" src={user.profile_img_url}/>

@@ -2,30 +2,35 @@
   background-color: white;
 }
 .topbox {
-  min-height: 200px;
+  min-height: 120px;
   border-bottom: 1px solid lightgray;
 
-  margin-bottom: -48px;
+  margin-bottom: -50px;
 }
 
 .profile-img-container {
-  // position: relative;
-  // top: -47px;
-  // left: 50%;
-  display: flex;
-  // margin-bottom: -100px;
-  justify-content: center;
 
+  display: flex;
+  flex-direction: column;
+}
+
+.prof-icon-container {
+  display: flex;
 }
 
 .profile-img{
-  width: 80px;
-  height: 80px;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
   margin: 0 auto;
-  padding: 6px;
+  padding: 12px 6px 6px 6px;
   border: 2px solid white;
   border-radius: 50%;
-  background-color: silver;
+  background-color: lightgray;
+  color: gray;
+  text-align: center;
+
+
   // position: relative;
   // z-index: 1;
   // top: 25%;

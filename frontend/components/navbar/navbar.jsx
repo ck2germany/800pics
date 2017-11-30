@@ -23,7 +23,7 @@ const NavBar = ({ currentUser, logout, loginDemoUser, currentPath }) => {
 
   const display = currentUser ? (
     <div className="header-nav-right">
-      <p>{currentUser.username}</p>
+      <Link to={`/user/${currentUser.id}`}>{currentUser.username}</Link>
       <button className="text-button" onClick={logout}>Log out</button>
     </div>
   ) : (
@@ -41,7 +41,7 @@ const NavBar = ({ currentUser, logout, loginDemoUser, currentPath }) => {
   return (
     <header className="header-nav">
       <div className="header-nav-left">
-        <h1 className="logo"><a href='#'><i className="fa fa-tree"></i>Landscapes</a></h1>
+        <h1 className="logo"><a href='#'><i className="fa fa-pagelines"></i>Landscapes</a></h1>
       </div>
       <div>
         {display}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Moment from 'react-moment';
 
 const PhotoIndexItem = ({photo}) => {
 
@@ -7,11 +8,13 @@ const PhotoIndexItem = ({photo}) => {
     <li className="photo-index-item">
       <div className="photo-item-userbox">
         <div className="user_prof_img">
-          <img src={photo.profile_img_url} />
+          <div className="icon-img-box">
+            <i className="icon-img fa fa-pagelines fa-2x" aria-hidden="true"></i>
+          </div>
         </div>
         <div className="user_prof_data">
           <h2><Link to={`/user/${photo.user_id}`} >{photo.username}</Link></h2>
-          <h4>Placeholder for extra info</h4>
+          <Moment className="photo-created-text" fromNow>{photo.created_at}</Moment>
         </div>
       </div>
       <div className="photo-item-imagebox">
@@ -29,3 +32,4 @@ export default PhotoIndexItem;
 
 
 // <h2><Link to={`/user/${photo.user_id}`} >{photo.username}</Link></h2>
+//<img src={photo.profile_img_url} />

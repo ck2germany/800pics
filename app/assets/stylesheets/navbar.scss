@@ -34,6 +34,10 @@ header {
 //left side
 .header-nav-left {
  display: flex;
+ color: gray;
+ a:hover {
+   color: #660099;
+ }
 }
 
 
@@ -43,13 +47,19 @@ header {
   display: flex;
   align-items: baseline;
 
-  p {
+  a:hover {
+    color: #660099;
+  }
+
+  a {
     padding: 0px 8px;
     font-size: 14px;
+    color: gray;
+    font-weight: bolder;
   }
 
   button {
-    font-size: 14px;
+    // font-size: 14px;
   }
   //
   // button:hover {
@@ -70,8 +80,8 @@ header {
 }
 
 .text-button {
-  background-color: clear;
-  color: #660099;
+
+  color: gray;
   border-radius: 3px;
   // color: black;
   padding: 2px 8px;
@@ -80,6 +90,10 @@ header {
   display: inline-block;
   font-size: 14px;
   // width: 50px;
+}
+
+.text-button:hover {
+  color: #660099;
 }
 
 
