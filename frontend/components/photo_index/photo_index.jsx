@@ -13,25 +13,27 @@ class PhotoIndex extends React.Component {
     this.props.getAllPhotos();
   }
 
+
   render () {
 
     let photoArr;
     if (this.props.photos[0]) {
       photoArr = this.props.photos;
+
     }
 
-  
+
     if (!photoArr) {
       return (<div>Loading...</div>);
     }
 
-    let pArr = photoArr.slice(0,5);
+
 
     return (
       <div>
         <ul>
           {
-            pArr.map(photo => <PhotoIndexItem
+            photoArr.map(photo => <PhotoIndexItem
               photo={photo}
               key={`photo-${photo.id}`} />)
           }

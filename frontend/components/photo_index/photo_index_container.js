@@ -1,14 +1,18 @@
 import { connect } from 'react-redux';
 
-import { fetchAllPhotos, fetchSinglePhoto, receiveErrors } from '../../actions/photo_actions';
+import {
+  fetchAllPhotos,
+  fetchSinglePhoto,
+  receiveErrors
+} from '../../actions/photo_actions';
 
-import { getPhotosArray } from '../../reducers/selectors';
+import { getPhotosArray, shuffleArray } from '../../reducers/selectors';
 import PhotoIndex from './photo_index';
 
 const mapStateToProps = (state, ownProps) => {
   // console.log(entities);
   return ({
-    photos: getPhotosArray(state.entities),
+    photos: getPhotosArray(state.entities.photos),
     errors: state.errors.photo,
   });
 };
