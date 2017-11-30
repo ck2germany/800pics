@@ -9,7 +9,7 @@ class PhotoIndex extends React.Component {
   }
 
   componentWillMount () {
-    console.log('componentWillMount');
+
     this.props.getAllPhotos();
   }
 
@@ -20,7 +20,7 @@ class PhotoIndex extends React.Component {
       photoArr = this.props.photos;
     }
 
-    console.log(photoArr);
+  
     if (!photoArr) {
       return (<div>Loading...</div>);
     }

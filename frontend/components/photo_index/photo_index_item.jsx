@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PhotoIndexItem = ({photo}) => {
-  console.log(photo);
+
   return (
     <li className="photo-index-item">
       <div className="photo-item-userbox">
