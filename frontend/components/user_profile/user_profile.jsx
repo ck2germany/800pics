@@ -29,7 +29,7 @@ class UserProfile extends React.Component {
     let user = this.props.users[this.props.userId];
     let photoCount = this.props.user.user_photos.length;
     return (
-      <div>
+      <div className="topbox-wrapper">
         <div className="topbox">
           <img className="profile-splash-img"></img>
         </div>

@@ -1,7 +1,10 @@
+.topbox-wrapper {
+  background-color: white;
+}
 .topbox {
   min-height: 200px;
   border-bottom: 1px solid lightgray;
-  background-color: #f0f0f0;
+
   margin-bottom: -48px;
 }
 
@@ -12,6 +15,7 @@
   display: flex;
   // margin-bottom: -100px;
   justify-content: center;
+
 }
 
 .profile-img{
@@ -33,6 +37,7 @@
   flex-direction: column;
   border-bottom: 1px solid lightgray;
   align-items: center;
+
 
 }
 
