@@ -9,6 +9,7 @@ Landscapes is a clone based on the popular web app [500px](500px.com). It has ba
 - Built with Ruby on Rails for the backend, a postgreSQL database, and sending up data using jbuilder to send data back from ajax requests
 - The frontend features a React-Redux implementation
 - Basic User Authentication
+- User Following, based on a joins table to show how many users are followed and how many users are following
 
 
 ### Screenshot
@@ -20,7 +21,6 @@ Landscapes is a clone based on the popular web app [500px](500px.com). It has ba
 
 ### Coming Soon
 - Features planned
-    - User Follows
     - Photo Show - Modal
     - Photo Uploading
     - Photo Likes

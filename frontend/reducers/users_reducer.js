@@ -10,7 +10,7 @@ const usersReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_USER:
-    console.log(action.user);
+    
       let newUser = { [action.user.id]: action.user };
       let merged = merge({}, state, newUser);
       merged[action.user.id].fans = [];
