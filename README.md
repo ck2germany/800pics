@@ -1,40 +1,31 @@
 ## Landscapes
 [Landscapes](https://landscapes-reconnect.herokuapp.com)
+
 Landscapes is a clone based on the popular web app [500px](500px.com). It has basic functionality of displaying recent photos and viewing user profiles.
 
-### Project Name/Intro
+### Features
 
 - Single page web application.
+- Built with Ruby on Rails for the backend, a postgreSQL database, utilizing jbuilder to send up information
+- The frontend features a React-Redux implementation
+- Basic User Authentication
+
+
+### Screenshot
 
 
 
-
-### Getting Started/Requirements/Prerequisites/Dependencies
-Include any essential instructions for:
-- Getting it
-- Installing It
-- Configuring It
-- Running it
-
-### More Specific Topics (+ sample sub-categories)
-- Versioning: Services, APIs, Systems
-- Common Error Messages/related details
-- Tests
-- Is it a Swift project? Please take a look at Mattt Thompson & Nate Cook's [Swift documentation](http://nshipster.com/swift-documentation/) guide
-
-### Contributing
-- Contributor Guidelines
-- Code Style/Requirements
-- Format for commit messages
-- Thank you (name contributors)
 
 ### TODO
-- Next steps
 - Features planned
-- Known bugs (shortlist)
+    - User Follows
+    - Photo Uploading
+    - Photo Likes
+    - Photo Show - Modal
+
 
 ### Contact
-- Email address
+- [ckiesz@gmail.com](mailto:ckiesz@gmail.com)
 - Google Group/mailing list (if applicable)
 - IRC or Slack (if applicable)
 
