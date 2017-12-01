@@ -28,8 +28,8 @@ export const getUserInfo = (userId) => dispatch => (
   )
 );
 
-export const followUser = (userId) => dispatch => (
-  FollowUtil.postFollow(userId)
+export const followUser = (puId, cuId) => dispatch => (
+  FollowUtil.postFollow(puId, cuId)
     .then(
       user => (
         dispatch(receiveUser(user))
@@ -39,8 +39,8 @@ export const followUser = (userId) => dispatch => (
   )
 );
 
-export const unFollowUser = (userId) => dispatch => (
-  FollowUtil.deleteFollow(userId)
+export const unFollowUser = (puId, cuId) => dispatch => (
+  FollowUtil.deleteFollow(puId, cuId)
     .then(
       user => (
         dispatch(receiveUser(user))

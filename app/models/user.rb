@@ -33,7 +33,7 @@ class User < ApplicationRecord
   primary_key: :id,
   class_name: :Follow
 
-  has_many :followers,
+  has_many :fans,
   through: :following_users,
   source: :followed_user
 

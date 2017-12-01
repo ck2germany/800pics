@@ -13,3 +13,7 @@ export const shuffleArray = (array) => {
     }
     return array;
 };
+
+export const isFollowing = (array, uID) => {
+  return array.includes(uID);
+};

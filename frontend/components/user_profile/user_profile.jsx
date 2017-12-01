@@ -8,6 +8,7 @@ import MasonryViewContainer from '../masonry_view/masonry_view_container';
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
+
   }
   componentWillMount () {
     this.props.getUsrInfo(this.props.userId);
@@ -18,19 +19,22 @@ class UserProfile extends React.Component {
     if(this.props.match.params !== newProps.match.params){
       this.props.getUsrInfo(newProps.userId);
     }
+
   }
 
-  changeFollow (oldBool) {
-    
-  }
+  changeFollowButton (following) {
 
-  followButton (followedByCurrentUser) {
-    if (this.props.userId === this.props.currentUserId) {
-      console.log("managed to hit userid same as current");
-      return (<div>Self</div>);
+    const bText = following ? "Unfollow" : "Follow";
+    if (this.props.userId == this.props.currentUserId) {
+      return(<div></div>);
+    } else if (following) {
+      return (
+        <button onClick={() => this.props.unFollowUser(this.props.userId)}>{bText}</button>
+      );
     } else {
-      let buttonText = followedByCurrentUser ? "Following" : "Follow";
-      return (<button onClick={this.changeFollow(followedByCurrentUser)} className={buttonText}> {buttonText}</button>);
+      return (
+      <button onClick={() => this.props.followUser(this.props.userId)}>{bText}</button>
+      );
     }
   }
 
@@ -42,7 +46,9 @@ class UserProfile extends React.Component {
 
     let user  = this.props.user;
     let photoCount = user.user_photos.length;
-    console.log(`current user follows is ${user.followed_by_current_user}`);
+  
+    let following = user.fans.includes(this.props.currentUserId);
+
     return (
       <div className="topbox-wrapper">
         <div className="topbox">
@@ -69,7 +75,7 @@ class UserProfile extends React.Component {
             </div>
           </div>
           <div className="profile-follow-button">
-            {this.followButton(user.followed_by_current_user)}
+            {this.changeFollowButton(following)}
           </div>
         </div>
 

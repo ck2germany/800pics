@@ -1,15 +1,15 @@
-export const postFollow = (uid) => (
+export const postFollow = (puId, cuId) => (
   $.ajax({
     url: '/api/follows',
     method: 'POST',
-    data: { uid }
+    data: { puId, cuId }
   })
 );
 
-export const deleteFollow = (uid) => (
+export const deleteFollow = (id, cuId) => (
   $.ajax({
-    url: `/api/follows`,
+    url: `/api/follows/${id}`,
     method: 'DELETE',
-    data: { uid }
+    data: { cuId }
   })
 );
