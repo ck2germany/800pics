@@ -12,7 +12,7 @@ Landscapes is a clone based on the popular web app [500px](500px.com). It has ba
 
 
 ### Screenshot
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/ck2germany/Landscapes/master/design%20docs/index_page_ex.png)
 
 
 
