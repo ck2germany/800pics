@@ -16,6 +16,7 @@
 
 .prof-icon-container {
   display: flex;
+
 }
 
 .profile-img{
@@ -30,18 +31,36 @@
   color: gray;
   text-align: center;
 
-
-  // position: relative;
-  // z-index: 1;
-  // top: 25%;
 }
 
+* {
+  // border: 1px solid pink !important;
+}
+.profile-follow-button {
+  position: absolute;
+  right: 12px;
+  margin-top: -39px;
+  top: 0px;
+
+
+  button {
+    background-color: #660099;
+    padding: 6px 8px;
+    height: 18px;
+    color: white;
+    font-size: 14px;
+  }
+
+}
+
+
 .profile-user-box {
-  display: flex;
+  // display: flex;
   min-height: 80px;
-  flex-direction: column;
+  // flex-direction: column;
   border-bottom: 1px solid lightgray;
-  align-items: center;
+  // align-items: center;
+  position: relative;
 
 
 }
@@ -61,8 +80,10 @@
   margin: 0 auto;
   display: flex;
   flex-direction: row !important;
+
   div {
-    width: 120px;
+    display: flex;
+    margin: 0 auto;
     // border: 1px solid lightgray;
     // border-radius: 2px;
   }

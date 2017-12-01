@@ -1,8 +1,8 @@
 class Api::FollowsController < ApplicationController
   def create
     @follow = Follow.new
-    @follow.followee_id = params[:id]
-    @follow.follower_id = current_user.id
+    @follow.followee_id = current_user.id
+    @follow.follower_id = params[:id]
 
     if @follow.save
       render "api/users/show"
@@ -21,4 +21,5 @@ class Api::FollowsController < ApplicationController
     end
 
   end
+
 end

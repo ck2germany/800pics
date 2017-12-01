@@ -5,11 +5,17 @@ import { fetchAllPhotos } from '../../actions/photo_actions';
 import UserProfile from './user_profile';
 
 const mapStateToProps = (state, ownProps) => {
+
   const userId = ownProps.match.params.id;
+  const user = state.entities.users[userId];
+  console.log("mstps");
+  console.log(user);
   return ({
-  users: state.entities.users,
-  user: state.entities.users[userId],
-  userId
+  user: user,
+  userId,
+  currentUserId: state.session.currentUser.id,
+
+
   });
 };
  // .match.params

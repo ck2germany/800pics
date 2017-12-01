@@ -20,14 +20,28 @@ class UserProfile extends React.Component {
     }
   }
 
+  changeFollow (oldBool) {
+
+  }
+
+  followButton (followedByCurrentUser) {
+    if (this.props.userId === this.props.currentUserId) {
+      return (<div>Self</div>);
+    } else {
+      let buttonText = followedByCurrentUser ? "Following" : "Follow";
+      return (<button onClick={this.changeFollow(followedByCurrentUser)} className={buttonText}> {buttonText}</button>);
+    }
+  }
+
 
   render () {
-    if (!this.props.users[this.props.userId]) {
+    if (!this.props.user) {
       return (<div>One moment, please</div>);
     }
 
-    let user = this.props.users[this.props.userId];
-    let photoCount = this.props.user.user_photos.length;
+    let user  = this.props.user;
+    let photoCount = user.user_photos.length;
+    console.log(`current user follows is ${user.followed_by_current_user}`);
     return (
       <div className="topbox-wrapper">
         <div className="topbox">
@@ -40,22 +54,27 @@ class UserProfile extends React.Component {
           </div>
         </div>
 
+
         <div className="profile-user-box">
           <div className="profile-info-username">
             <h3>{user.username}</h3>
           </div>
 
           <div className="profile-info-stats">
+            <div>
               <p>{photoCount} Photos</p>
-              <p className="count">13 Followers</p>
-              <p className="count">27 Following</p>
+              <p className="count">{user.followers} Followers</p>
+              <p className="count">{user.following} Following</p>
+            </div>
           </div>
-
+          <div className="profile-follow-button">
+            {this.followButton(user.followed_by_current_user)}
+          </div>
         </div>
 
 
         <div className="masonry-view-div">
-          <MasonryViewContainer usrphotos={this.props.user.user_photos}/>
+          <MasonryViewContainer usrphotos={user.user_photos}/>
         </div>
 
       </div>
