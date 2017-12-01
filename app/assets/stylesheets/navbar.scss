@@ -27,14 +27,14 @@ header {
   align-items: center;
 
 
-  height: 40px;
-  border-bottom: 1px solid #0a0a0a;
+  height: 48px;
+  border-bottom: 1px solid darkgray;
 
 }
 //left side
 .header-nav-left {
  display: flex;
- color: gray;
+ color: #585858;
  a:hover {
    color: #660099;
  }
@@ -53,25 +53,22 @@ header {
 
   a {
     padding: 0px 8px;
-    font-size: 14px;
-    color: gray;
-    font-weight: bolder;
+    font-size: 16px;
+    color: #585858;
+    font-weight: bold;
   }
 
   button {
     // font-size: 14px;
   }
-  //
-  // button:hover {
-  //   color: #660099;
-  //
-  // }
 
 }
 
 // right side buttons either signup/login or user and logout
 .session-nav-buttons {
   display: flex;
+  align-items: baseline;
+  color: darkgray;
 
   button:hover, a:hover {
     color: #660099;
