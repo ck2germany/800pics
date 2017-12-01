@@ -1,15 +1,11 @@
 json.extract! user, :id, :username, :profile_img_url
 
 json.fans do
-  json.array! user.fans do |fan|
-    fan.id
-  end
+  json.array! user.fans.pluck(:id)
 end
 
 json.idols do
-  json.array! user.idols do |idol|
-    idol.id
-  end
+  json.array! user.idols.pluck(:id)
 end
 
 json.following user.idols.count

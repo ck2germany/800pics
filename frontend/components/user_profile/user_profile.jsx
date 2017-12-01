@@ -40,13 +40,16 @@ class UserProfile extends React.Component {
 
 
   render () {
+
     if (!this.props.user) {
       return (<div>One moment, please</div>);
     }
 
+
     let user  = this.props.user;
     let photoCount = user.user_photos.length;
-  
+
+
     let following = user.fans.includes(this.props.currentUserId);
 
     return (

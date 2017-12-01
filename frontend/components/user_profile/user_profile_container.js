@@ -11,11 +11,6 @@ const mapStateToProps = (state, ownProps) => {
   const user = state.entities.users[userId];
   const currentUserId = state.session.currentUser.id;
 
-  // if (user.fans) {
-  //   let following = isFolllowing(user.fans, currentUserId);
-  // }
-  // console.log(userId);
-  // console.log(state.session.currentUser.id);
   return ({
   user: user,
   userId,
