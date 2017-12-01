@@ -1,4 +1,5 @@
 import * as UserUtil from '../util/user_api_util';
+import * as FollowUtil from '../util/follow_api_util';
 
 export const RECEIVE_USER = 'RECEIVE_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
@@ -23,5 +24,28 @@ export const getUserInfo = (userId) => dispatch => (
         dispatch(receiveUser(user))
     ), err => (
       dispatch(receiveErrors(err.responseJSON))
-  ))
+    )
+  )
+);
+
+export const followUser = (userId) => dispatch => (
+  FollowUtil.postFollow(userId)
+    .then(
+      user => (
+        dispatch(receiveUser(user))
+      ), err => (
+        dispatch(receiveErrors(err.responseJSON))
+      )
+  )
+);
+
+export const unFollowUser = (userId) => dispatch => (
+  FollowUtil.deleteFollow(userId)
+    .then(
+      user => (
+        dispatch(receiveUser(user))
+      ), err => (
+        dispatch(receiveErrors(err.responseJSON))
+      )
+    )
 );
