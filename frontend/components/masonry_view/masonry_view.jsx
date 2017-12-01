@@ -24,7 +24,7 @@ class MasonryView extends React.Component {
 
   render () {
     let photoArr;
-    console.log(this.props);
+
 
     if (this.props.usrphotos[0]) {
       photoArr = this.props.usrphotos;
