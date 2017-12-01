@@ -21,11 +21,12 @@ class UserProfile extends React.Component {
   }
 
   changeFollow (oldBool) {
-
+    
   }
 
   followButton (followedByCurrentUser) {
     if (this.props.userId === this.props.currentUserId) {
+      console.log("managed to hit userid same as current");
       return (<div>Self</div>);
     } else {
       let buttonText = followedByCurrentUser ? "Following" : "Follow";
