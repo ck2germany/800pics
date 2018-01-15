@@ -1,5 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
+const modalRoot = document.getElementById('modal');
 class Modal extends React.Component {
   constructor(props) {
     super(props);
@@ -15,4 +17,19 @@ class Modal extends React.Component {
     modalRoot.appendChild(this.el);
   }
 
+  componentWillUnmount() {
+    modalRoot.removeChild(this.el);
+  }
+
+  render() {
+    //this is where the portal is used to render the children
+    return ReactDOM.createPortal(
+      //first the react element
+      this.props.children,
+      //then the element where you put it
+      this.el
+    );
+  }
 }
+
+export default Modal;
