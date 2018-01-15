@@ -22,9 +22,23 @@ class PhotoIndexItem extends React.Component {
   }
 
   modalView (photo) {
-    <Modal>
+    const modal = this.state.showModal ? (
+      <Modal>
+        <div className="photo-modal">
+          <div>
+            Test Modal to cover entire screen
+          </div>
+          <button onClick={this.handleHide}>Hide Modal</button>
+        </div>
+      </Modal>
+    ) : null;
 
-    </Modal>
+    return (
+      <div>
+        <button onClick={this.handleShow}>Show Modal</button>
+        {modal}
+      </div>
+    );
   }
 
   render () {
