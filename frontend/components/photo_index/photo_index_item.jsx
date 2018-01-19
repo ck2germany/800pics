@@ -13,7 +13,7 @@ class PhotoIndexItem extends React.Component {
     this.handleHide = this.handleHide.bind(this);
   }
 
-  handleShow () {
+  handleShow (photo) {
     this.setState({showModal: true});
   }
 
@@ -56,7 +56,9 @@ class PhotoIndexItem extends React.Component {
             <Moment className="photo-created-text" fromNow>{photo.created_at}</Moment>
           </div>
         </div>
-        <div className="photo-item-imagebox">
+
+        //TODO
+        <div onClick={this.handleShow(photo)} className="photo-item-imagebox">
           <img src={photo.img_url} alt="test image" />
         </div>
         <div className="photo-item-infobox">
@@ -69,7 +71,14 @@ class PhotoIndexItem extends React.Component {
 }
 
 export default PhotoIndexItem;
-
+// adding in a modal
+// create a special component that will become a full page view
+// for a full page photo, it needs to get the data of the photo and user
+// the outermost div can be half opaque and handles an outside click to close
+// the next inner div becomes the container box for the whole thing
+// two options, could make a general "full page" modal that then plugs in
+// a separate set of components based on need
+// full page model, then build a container?
 
 // <h2><Link to={`/user/${photo.user_id}`} >{photo.username}</Link></h2>
 //<img src={photo.profile_img_url} />

@@ -14,7 +14,7 @@ import UserProfileContainer from './user_profile/user_profile_container';
 const App = () => (
   <div>
 
-      <Route path="/" component={NavBarContainer} />
+    <Route path="/" component={NavBarContainer} />
 
     <Switch>
       <AuthRoute path="/login" component={SessionFormContainer} />
