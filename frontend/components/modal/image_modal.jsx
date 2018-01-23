@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 const modalRoot = document.getElementById('modal');
 
-class Modal extends React.Component {
+class ImageModal extends React.Component {
   constructor(props) {
     super(props);
     this.el = document.createElement('div');
@@ -26,4 +26,4 @@ class Modal extends React.Component {
 
 }
 
-export default Modal;
+export default ImageModal;
