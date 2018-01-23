@@ -1,6 +1,7 @@
 The approach I suggest is a bit verbose but I found it to scale pretty well into complex apps. When you want to show a modal, fire an action describing which modal you'd like to see:
 
 Dispatching an Action to Show the Modal
+```
 this.props.dispatch({
   type: 'SHOW_MODAL',
   modalType: 'DELETE_POST',
@@ -8,11 +9,12 @@ this.props.dispatch({
     postId: 42
   }
 })
+```
 (Strings can be constants of course; I’m using inline strings for simplicity.)
 
 Writing a Reducer to Manage Modal State
 Then make sure you have a reducer that just accepts these values:
-
+```
 const initialState = {
   modalType: null,
   modalProps: {}
@@ -38,11 +40,12 @@ const rootReducer = combineReducers({
   modal,
   /* other reducers */
 })
+```
 Great! Now, when you dispatch an action, state.modal will update to include the information about the currently visible modal window.
 
 Writing the Root Modal Component
 At the root of your component hierarchy, add a <ModalRoot> component that is connected to the Redux store. It will listen to state.modal and display an appropriate modal component, forwarding the props from the state.modal.modalProps.
-
+```
 // These are regular React components we will write soon
 import DeletePostModal from './DeletePostModal'
 import ConfirmLogoutModal from './ConfirmLogoutModal'
@@ -65,13 +68,14 @@ const ModalRoot = ({ modalType, modalProps }) => {
 export default connect(
   state => state.modal
 )(ModalRoot)
+```
 What have we done here? ModalRoot reads the current modalType and modalProps from state.modal to which it is connected, and renders a corresponding component such as DeletePostModal or ConfirmLogoutModal. Every modal is a component!
 
 Writing Specific Modal Components
 There are no general rules here. They are just React components that can dispatch actions, read something from the store state, and just happen to be modals.
 
 For example, DeletePostModal might look like:
-
+```
 import { deletePost, hideModal } from '../actions'
 
 const DeletePostModal = ({ post, dispatch }) => (
@@ -95,13 +99,14 @@ export default connect(
     post: state.postsById[ownProps.postId]
   })
 )(DeletePostModal)
+```
 The DeletePostModal is connected to the store so it can display the post title and works like any connected component: it can dispatch actions, including hideModal when it is necessary to hide itself.
 
 Extracting a Presentational Component
 It would be awkward to copy-paste the same layout logic for every “specific” modal. But you have components, right? So you can extract a presentational <Modal> component that doesn’t know what particular modals do, but handles how they look.
 
 Then, specific modals such as DeletePostModal can use it for rendering:
-
+```
 import { deletePost, hideModal } from '../actions'
 import Modal from './Modal'
 
@@ -121,6 +126,7 @@ export default connect(
     post: state.postsById[ownProps.postId]
   })
 )(DeletePostModal)
+```
 It is up to you to come up with a set of props that <Modal> can accept in your application but I would imagine that you might have several kinds of modals (e.g. info modal, confirmation modal, etc), and several styles for them.
 
 Accessibility and Hiding on Click Outside or Escape Key
