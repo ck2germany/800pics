@@ -3,7 +3,7 @@ import {
   HIDE_MODAL
 } from '../actions/modal_actions.js';
 
-var intialState = {
+const intialState = {
   modalType: null,
   modalProps: {}
 };

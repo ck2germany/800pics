@@ -6,3 +6,7 @@ export const showModal = (payload) => ({
   modalType: payload.modalType,
   modalProps: payload.modalProps,
 });
+
+export const hideModal = () => ({
+  type: HIDE_MODAL,
+});
