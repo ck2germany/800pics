@@ -4,5 +4,5 @@ export const HIDE_MODAL = 'HIDE_MODAL';
 export const showModal = (payload) => ({
   type: SHOW_MODAL,
   modalType: payload.modalType,
-  data: payload.data
+  modalProps: payload.modalProps,
 });
